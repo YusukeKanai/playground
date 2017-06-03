@@ -119,6 +119,10 @@ export class Activations {
       return 1 - output * output;
     }
   };
+  public static LERELU: ActivationFunction = {
+    output: x => Math.max(0.1*x, x),
+    der: x => x <= 0 ? 0.1 : 1
+  };
   public static RELU: ActivationFunction = {
     output: x => Math.max(0, x),
     der: x => x <= 0 ? 0 : 1

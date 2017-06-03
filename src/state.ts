@@ -21,6 +21,7 @@ const HIDE_STATE_SUFFIX = "_hide";
 
 /** A map between names and activation functions. */
 export let activations: {[key: string]: nn.ActivationFunction} = {
+  "lerelu": nn.Activations.LERELU,
   "relu": nn.Activations.RELU,
   "tanh": nn.Activations.TANH,
   "sigmoid": nn.Activations.SIGMOID,
